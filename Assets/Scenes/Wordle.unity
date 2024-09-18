@@ -761,7 +761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0.22745098, g: 0.22745098, b: 0.23529412, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
+  m_EffectDistance: {x: 3, y: -3}
   m_UseGraphicAlpha: 1
 --- !u!114 &560040939
 MonoBehaviour:
@@ -806,7 +806,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 560040940}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 560040942}
+        m_TargetAssemblyTypeName: BotonMostrarPalabra, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &560040940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -857,9 +869,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bcd4a370d7f98c4a997df4f8030e9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mostrarPalabra: {fileID: 560040936}
+  mostrarPalabra: {fileID: 560040939}
+  mostrarPalabraTXT: {fileID: 1822975187}
   PalabraText: {fileID: 297888110}
   board: {fileID: 1891888964}
+  IsMostrando: 0
 --- !u!1 &629275722
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,6 +2199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb465afe735a1a4db8612fff165f671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PalabraText: {fileID: 297888110}
+  MostrarPalabraText: {fileID: 1822975187}
+  Script: {fileID: 560040942}
   word: 
   emptyState:
     fillColor: {r: 0.07058824, g: 0.07058824, b: 0.07450981, a: 1}

@@ -13,7 +13,9 @@ public class Board : MonoBehaviour
     };
 
     private static readonly string[] SEPARATOR = new string[] { "\r\n", "\r", "\n" };
-
+    public TMP_Text PalabraText;
+    public TMP_Text MostrarPalabraText;
+    public BotonMostrarPalabra Script;
     private Row[] rows;
     private int rowIndex;
     private int columnIndex;
@@ -60,7 +62,9 @@ public class Board : MonoBehaviour
     {
         ClearBoard();
         SetRandomWord();
-
+        PalabraText.text = "";
+        MostrarPalabraText.text = "MOSTRAR PALABRA";
+        Script.IsMostrando = false;
         enabled = true;
     }
 
